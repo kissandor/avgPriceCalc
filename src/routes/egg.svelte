@@ -27,7 +27,8 @@
     }
     
     .egg:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+      box-shadow: 0 0px 8px 3px rgba(0,0,0,0.7);
+      cursor: pointer;
     }
     
     .container {
