@@ -1,7 +1,7 @@
 <script lang="ts">
     import Egg from "./egg.svelte";
     let eggs = [
-        {name: 'Olive', source: '/src/routes/olive.png'},
+        {name: 'Olive', source: 'olive.png'},
         {name: 'Leghorn', source: './src/img/leghorn.png'},
         {name: 'Legbar', source: './src/img/legbar.png'},
         {name: 'Burfordd', source: './src/img/burford.png'},
