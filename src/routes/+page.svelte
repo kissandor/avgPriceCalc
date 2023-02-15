@@ -1,10 +1,10 @@
 <script lang="ts">
     import Egg from "./egg.svelte";
     let eggs = [
-        {name: 'Olive', source: './src/routes/img/olive.png'},
-        {name: 'Leghorn', source: './src/routes/img/leghorn.png'},
-        {name: 'Legbar', source: './src/routes/img/legbar.png'},
-        {name: 'Burfordd', source: './src/routes/img/burford.png'},
+        {name: 'Olive', source: 'src/img/olive.png'},
+        {name: 'Leghorn', source: './src/img/leghorn.png'},
+        {name: 'Legbar', source: './src/img/legbar.png'},
+        {name: 'Burfordd', source: './src/img/burford.png'},
         ]
 </script>
 
