@@ -2,8 +2,8 @@
     import Egg from "./egg.svelte";
     let eggs = [
         {name: 'Olive', source: 'public/olive.png'},
-        {name: 'Leghorn', source: '/src/img/leghorn.png'},
-        {name: 'Legbar', source: 'src/img/legbar.png'},
+        {name: 'Leghorn', source: '/img/leghorn.png'},
+        {name: 'Legbar', source: './img/legbar.png'},
         {name: 'Burfordd', source: './src/img/burford.png'},
         ]
 </script>
