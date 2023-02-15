@@ -4,10 +4,10 @@
 </script>
 <div class="egg">
     <img src={source} alt="egg">
-    <div class="container">
+    <div class="cont">
       <span><b>{eggName}</b></span>  
     </div>
-</div>
+  </div>
 
 <style>
     img{
@@ -17,22 +17,23 @@
     .egg {
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
-      width: 8%;
-      float: left;
+      width: 7%;  
+      display: inline-block;
       margin: 10px;
       padding-top: 10px;
       border-radius: 10px;  
       text-align: center;
       background-color: white;
     }
-    
+  
     .egg:hover {
       box-shadow: 0 0px 8px 3px rgba(0,0,0,0.7);
       cursor: pointer;
     }
     
-    .container {
+    .cont {
       padding: 2px 4px;
       text-align: center;
+      font-size: 0.9vw;
     }
     </style>
