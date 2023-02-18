@@ -1,9 +1,21 @@
-<script>
+<script lang="ts">
     export let source = "src/img/olive.png";
     export let eggName = "Burford Brown";
+
+    import { createEventDispatcher } from 'svelte';
+
+	  const dispatch = createEventDispatcher();
+
+	  function changeEggProfile(eggName: String) {
+		  dispatch('eggName', {
+			  text: eggName
+		});
+	}
 </script>
+
 <div class="egg">
-    <img src={source} alt="egg">
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <img src={source} alt="egg" on:click={()=>{changeEggProfile(eggName)}}>
     <div class="cont">
       <span><b>{eggName}</b></span>  
     </div>

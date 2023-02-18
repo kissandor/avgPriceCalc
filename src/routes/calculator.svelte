@@ -1,10 +1,5 @@
 <script lang="ts">
-    let veryLarge = 0;
-    let large = 0;
-    let medium = 0;
-    let smalls = 0;
-    let farmSec = 0;
-    let gradedSec = 0;
+   export let profile:number[] = [0, 0, 0, 0, 0, 0];
 </script>
 
 <div class="calculator">
@@ -16,37 +11,40 @@
     </div>
     <div class="row">
         <div class="size">Very Large</div>
-        <label class="profile" for="vl">{veryLarge}%</label>
+        <label class="profile" for="vl">{profile[0]}%</label>
         <input class="inputPrice" type="text" id="vl">
     </div>
     <div class="row">
         <div class="size">Large</div>
-        <label class="profile" for="lrg">{large}%</label>
+        <label class="profile" for="lrg">{profile[1]}%</label>
         <input class="inputPrice" type="text" id="lrg">
     </div>
     <div class="row">
         <div class="size">Medium</div>
-        <label class="profile" for="med">{medium}%</label>
+        <label class="profile" for="med">{profile[2]}%</label>
         <input class="inputPrice" type="text" id="med">
     </div>
     <div class="row">
         <div class="size">Smalls</div>
-        <label class="profile" for="sml">{smalls}%</label>
+        <label class="profile" for="sml">{profile[3]}%</label>
         <input class="inputPrice" type="text" id="sml">
     </div>
     <div class="row">
         <div class="size">Graded seconds</div>
-        <label class="profile" for="gs">{gradedSec}%</label>
+        <label class="profile" for="gs">{profile[4]}%</label>
         <input class="inputPrice" type="text" id="gs">
     </div>
     <div class="row">
         <div class="size">Farm seconds</div>
-        <label class="profile" for="fs">{farmSec}%</label>
+        <label class="profile" for="fs">{profile[5]}%</label>
         <input class="inputPrice" type="text" id="fs">
     </div>
 </div>
 
 <style>
+    .calculator{
+        font-size: 1vw;
+    }
     .firstRow{
         padding: 17px;
         box-sizing: border-box;
