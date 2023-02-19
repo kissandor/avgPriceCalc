@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let source = "src/img/olive.png";
+    export let source = "olive.png";
     export let eggName = "Burford Brown";
 
     import { createEventDispatcher } from 'svelte';
