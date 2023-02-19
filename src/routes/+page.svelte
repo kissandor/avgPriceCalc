@@ -1,8 +1,10 @@
 <script lang="ts">
     import Egg from "./egg.svelte";
     import Calc from "./calculator.svelte";
-    import Box from "./result.svelte";
+    import Dispay from "./result.svelte";
     let eggNameProfile: string = "Burford";
+    let price: number[] = [1,1,1,1,1,1];
+
     let eggs = [
         {name: 'Olive', source: '/src/img/olive.png', size: [4, 37, 43, 6, 4, 6]},
         {name: 'Legbar', source: '/src/img/legbar.png', size: [2, 22, 64, 5, 2, 5]},
@@ -16,9 +18,9 @@
         {name: 'Free Range', source: '/src/img/freerange.png', size: [3, 41, 45, 4, 2, 5]},
         ];
     
-       let profifile2:number[] = [0,0,0,0,0,0];
+    let profifile2:number[] = [0,0,0,0,0,0];
         
-        function handleMessage(event: { detail: { text: any; }; }) {
+    function handleMessage(event: { detail: { text: any; }; }) {
 		    eggNameProfile =  (event.detail.text).toString();
             
             const egg = eggs.find((egg) => egg.name.toLowerCase() === eggNameProfile.toLowerCase());
@@ -26,6 +28,11 @@
                 profifile2 = egg.size;
             }
 	    }
+    $: avgPrice =   (price.reduce((acc, num, i) => acc + num * profifile2[i], 0) / 10000).toFixed(2);
+
+    function priceUpdate(event: { detail: number[]; }){
+        price = event.detail
+    }
 
 </script>
 
@@ -39,14 +46,11 @@
     </div>
     <div style="display: flex">
         <div class="calc">
-            <Calc profile= {profifile2}/>
+            <Calc profile= {profifile2} on:sendNewPrice={priceUpdate} /> 
         </div>
         <div class="res">
             <span>
-                <Box>
-                    <h2>Hello!</h2>
-                    <p>This is a box. It can contain anything.</p>
-                </Box>
+                <Dispay avgEggPrice={avgPrice}/>
             </span>
         </div>
     </div>
@@ -61,10 +65,12 @@
     }
     .container{
         width: 100%;
-        height: 100vh;
+        height: 100%;
         padding: 0px 50px;
         background-color: #F5F4F3;
         box-sizing: border-box;
+        justify-content: center;
+        
     }
 
     .calc{

@@ -1,14 +1,23 @@
-<div class="box">
-	<slot></slot>
-</div>
+<script lang="ts">
+	export let avgEggPrice:string;
+</script>
+<p class="avgText">Avarage egg price:</p>
+<p class="display">
+	£ {avgEggPrice}
+</p>
 
 <style>
-	.box {
-		width: 300px;
-		border: 1px solid #aaa;
-		border-radius: 2px;
-		box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-		padding: 1em;
-		margin: 0 0 1em 0;
+	p{
+		text-align: center;
+
+	}
+	.avgText{
+		font-size: 3vw;
+		font-weight: bold;
+		margin-top: 30px;
+	}
+	.display{
+		font-size: 8vw;
+		margin-top: 20px;	
 	}
 </style>
