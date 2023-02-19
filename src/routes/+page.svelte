@@ -3,7 +3,7 @@
     import Calc from "./calculator.svelte";
     import Dispay from "./result.svelte";
     let eggNameProfile: string = "Burford";
-    let price: number[] = [1,1,1,1,1,1];
+    let price: number[] = [0,0,0,0,0,0];
 
     let eggs = [
         {name: 'Olive', source: '/src/img/olive.png', size: [4, 37, 43, 6, 4, 6]},
@@ -29,6 +29,7 @@
             }
 	    }
     $: avgPrice =   (price.reduce((acc, num, i) => acc + num * profifile2[i], 0) / 10000).toFixed(2);
+    $: console.log(avgPrice)
 
     function priceUpdate(event: { detail: number[]; }){
         price = event.detail
